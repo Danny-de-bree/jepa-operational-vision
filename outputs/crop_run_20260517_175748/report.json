@@ -1,0 +1,184 @@
+{
+  "summary": {
+    "run_id": "20260517_175748",
+    "experiment_type": "crop_robustness",
+    "support_samples": 80,
+    "eval_samples": 50,
+    "seed": 7,
+    "degradation_scope": "crop",
+    "degradation_mode": "none,pixel",
+    "degradation_ratios": "0.0,0.25,0.5,0.75",
+    "objects": 49,
+    "rows": 196,
+    "classes": 18,
+    "head_train_objects": 151,
+    "head_parameter_count": 26901,
+    "prototype_classes": 21
+  },
+  "per_degradation": [
+    {
+      "condition": "clean",
+      "degradation_ratio": 0.0,
+      "rows": 49.0,
+      "objects": 49.0,
+      "classes": 18.0,
+      "prototype_accuracy": 0.6122448979591837,
+      "head_accuracy": 0.7142857142857143,
+      "prototype_macro_accuracy": 0.5833333333333334,
+      "head_macro_accuracy": 0.6944444444444444,
+      "avg_prototype_similarity": 0.6111243823353125,
+      "avg_head_confidence": 0.729597407014936
+    },
+    {
+      "condition": "pixel_25",
+      "degradation_ratio": 0.25,
+      "rows": 49.0,
+      "objects": 49.0,
+      "classes": 18.0,
+      "prototype_accuracy": 0.5510204081632653,
+      "head_accuracy": 0.6326530612244898,
+      "prototype_macro_accuracy": 0.5138888888888888,
+      "head_macro_accuracy": 0.5648148148148148,
+      "avg_prototype_similarity": 0.5853971218576237,
+      "avg_head_confidence": 0.6470985516125732
+    },
+    {
+      "condition": "pixel_50",
+      "degradation_ratio": 0.5,
+      "rows": 49.0,
+      "objects": 49.0,
+      "classes": 18.0,
+      "prototype_accuracy": 0.46938775510204084,
+      "head_accuracy": 0.4897959183673469,
+      "prototype_macro_accuracy": 0.3935185185185185,
+      "head_macro_accuracy": 0.412037037037037,
+      "avg_prototype_similarity": 0.58723155941282,
+      "avg_head_confidence": 0.5623768635136382
+    },
+    {
+      "condition": "pixel_75",
+      "degradation_ratio": 0.75,
+      "rows": 49.0,
+      "objects": 49.0,
+      "classes": 18.0,
+      "prototype_accuracy": 0.2653061224489796,
+      "head_accuracy": 0.2653061224489796,
+      "prototype_macro_accuracy": 0.21759259259259256,
+      "head_macro_accuracy": 0.2222222222222222,
+      "avg_prototype_similarity": 0.5724840243251956,
+      "avg_head_confidence": 0.44847570779105944
+    }
+  ],
+  "top_prototype_confusions": [
+    {
+      "yolo_label": "Dog",
+      "predicted": "Chair",
+      "count": 8
+    },
+    {
+      "yolo_label": "Guard rail",
+      "predicted": "Manhole",
+      "count": 7
+    },
+    {
+      "yolo_label": "Manhole",
+      "predicted": "Person",
+      "count": 7
+    },
+    {
+      "yolo_label": "Pedestrian crosswalk",
+      "predicted": "Manhole",
+      "count": 6
+    },
+    {
+      "yolo_label": "Bus",
+      "predicted": "Truck",
+      "count": 6
+    },
+    {
+      "yolo_label": "Electrical Box",
+      "predicted": "Chair",
+      "count": 5
+    },
+    {
+      "yolo_label": "Traffic Cone",
+      "predicted": "Chair",
+      "count": 5
+    },
+    {
+      "yolo_label": "Stairs",
+      "predicted": "Chair",
+      "count": 4
+    },
+    {
+      "yolo_label": "Traffic sign",
+      "predicted": "Chair",
+      "count": 4
+    },
+    {
+      "yolo_label": "Dustbin",
+      "predicted": "Stairs",
+      "count": 3
+    }
+  ],
+  "top_head_confusions": [
+    {
+      "yolo_label": "Manhole",
+      "predicted": "Person",
+      "count": 6
+    },
+    {
+      "yolo_label": "Pedestrian crosswalk",
+      "predicted": "Manhole",
+      "count": 6
+    },
+    {
+      "yolo_label": "Guard rail",
+      "predicted": "Manhole",
+      "count": 5
+    },
+    {
+      "yolo_label": "Electrical Box",
+      "predicted": "Dustbin",
+      "count": 5
+    },
+    {
+      "yolo_label": "Dog",
+      "predicted": "Person",
+      "count": 5
+    },
+    {
+      "yolo_label": "Guard rail",
+      "predicted": "Tree",
+      "count": 4
+    },
+    {
+      "yolo_label": "Traffic sign",
+      "predicted": "Manhole",
+      "count": 4
+    },
+    {
+      "yolo_label": "Bus",
+      "predicted": "Truck",
+      "count": 4
+    },
+    {
+      "yolo_label": "Manhole",
+      "predicted": "Pedestrian crosswalk",
+      "count": 4
+    },
+    {
+      "yolo_label": "Chair",
+      "predicted": "Person",
+      "count": 3
+    }
+  ],
+  "files": {
+    "objects": "outputs/crop_run_20260517_175748/objects.csv",
+    "summary": "outputs/crop_run_20260517_175748/summary.csv",
+    "per_degradation": "outputs/crop_run_20260517_175748/per_degradation.csv",
+    "per_class": "outputs/crop_run_20260517_175748/per_class.csv",
+    "prototype_confusion": "outputs/crop_run_20260517_175748/prototype_confusion.csv",
+    "head_confusion": "outputs/crop_run_20260517_175748/head_confusion.csv"
+  }
+}
