@@ -1,5 +1,6 @@
 ---
 title: JEPA Demo
+emoji: 🧠
 colorFrom: blue
 colorTo: green
 sdk: docker
@@ -75,6 +76,55 @@ The goal is not only object detection. The goal is to inspect whether a represen
 - Compares YOLO labels with I-JEPA class prototypes built from reference images.
 - Optionally trains a tiny `LogisticRegression` classifier on frozen I-JEPA crop embeddings.
 - Analyzes object context using object crop, context crop, and scene embeddings.
+
+## Experiment Tracks
+
+This project has two related evaluation tracks.
+
+### 1. Crop-Level Robustness
+
+This is the primary representation test.
+
+YOLO provides the object location and benchmark label. The object is cropped from the clean image, then the crop is degraded at different levels. Frozen I-JEPA embeds the clean and degraded crops, and the tiny logistic-regression head predicts the object class from those embeddings.
+
+This answers:
+
+```text
+If the object is already localized, how much object identity survives in I-JEPA embedding space?
+```
+
+Use this track to inspect:
+
+- which classes remain stable under degradation
+- which classes collapse into confusion attractors
+- whether a tiny head can recover object identity from frozen I-JEPA embeddings
+- how clean crop embeddings drift under pixel or patch masking
+
+### 2. Full-Image Robustness
+
+This is the operational camera degradation test.
+
+The entire image is degraded before object crops and scene signals are analyzed. YOLO-format labels still provide the benchmark boxes and labels, but the image-level corruption simulates unreliable visual streams.
+
+This answers:
+
+```text
+If the whole camera frame is degraded, does the combined YOLO-grounded JEPA pipeline remain useful?
+```
+
+Use this track to inspect:
+
+- whole-frame corruption effects
+- scene-context robustness
+- saliency changes under degraded inputs
+- end-to-end behavior under operational image quality issues
+
+In short:
+
+```text
+Crop-level robustness = pure object identity in representation space
+Full-image robustness = operational degraded-camera behavior
+```
 
 ## Local Setup
 
