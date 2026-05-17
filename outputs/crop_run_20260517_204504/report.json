@@ -1,0 +1,184 @@
+{
+  "summary": {
+    "run_id": "20260517_204504",
+    "experiment_type": "crop_robustness",
+    "support_samples": 160,
+    "eval_samples": 200,
+    "seed": 7,
+    "degradation_scope": "crop",
+    "degradation_mode": "none,pixel",
+    "degradation_ratios": "0.0,0.25,0.5,0.75",
+    "objects": 195,
+    "rows": 780,
+    "classes": 23,
+    "head_train_objects": 348,
+    "head_parameter_count": 30744,
+    "prototype_classes": 24
+  },
+  "per_degradation": [
+    {
+      "condition": "clean",
+      "degradation_ratio": 0.0,
+      "rows": 195.0,
+      "objects": 195.0,
+      "classes": 23.0,
+      "prototype_accuracy": 0.7128205128205128,
+      "head_accuracy": 0.7794871794871795,
+      "prototype_macro_accuracy": 0.660334713595583,
+      "head_macro_accuracy": 0.6884920634920635,
+      "avg_prototype_similarity": 0.641330185914651,
+      "avg_head_confidence": 0.7942647404196528
+    },
+    {
+      "condition": "pixel_25",
+      "degradation_ratio": 0.25,
+      "rows": 195.0,
+      "objects": 195.0,
+      "classes": 23.0,
+      "prototype_accuracy": 0.6615384615384615,
+      "head_accuracy": 0.7230769230769231,
+      "prototype_macro_accuracy": 0.5859903381642512,
+      "head_macro_accuracy": 0.6519496204278813,
+      "avg_prototype_similarity": 0.6278019107305086,
+      "avg_head_confidence": 0.7245408628839968
+    },
+    {
+      "condition": "pixel_50",
+      "degradation_ratio": 0.5,
+      "rows": 195.0,
+      "objects": 195.0,
+      "classes": 23.0,
+      "prototype_accuracy": 0.5487179487179488,
+      "head_accuracy": 0.6,
+      "prototype_macro_accuracy": 0.4797791580400276,
+      "head_macro_accuracy": 0.5253795721187026,
+      "avg_prototype_similarity": 0.627272552710313,
+      "avg_head_confidence": 0.6536430434532283
+    },
+    {
+      "condition": "pixel_75",
+      "degradation_ratio": 0.75,
+      "rows": 195.0,
+      "objects": 195.0,
+      "classes": 23.0,
+      "prototype_accuracy": 0.31794871794871793,
+      "head_accuracy": 0.3333333333333333,
+      "prototype_macro_accuracy": 0.24699792960662523,
+      "head_macro_accuracy": 0.2534334023464458,
+      "avg_prototype_similarity": 0.6048833865385789,
+      "avg_head_confidence": 0.5486266741181489
+    }
+  ],
+  "top_prototype_confusions": [
+    {
+      "yolo_label": "Manhole",
+      "predicted": "Pedestrian crosswalk",
+      "count": 15
+    },
+    {
+      "yolo_label": "Electrical Pole",
+      "predicted": "Pedestrian crosswalk",
+      "count": 15
+    },
+    {
+      "yolo_label": "Traffic sign",
+      "predicted": "Pedestrian crosswalk",
+      "count": 15
+    },
+    {
+      "yolo_label": "Guard rail",
+      "predicted": "Pedestrian crosswalk",
+      "count": 14
+    },
+    {
+      "yolo_label": "Dog",
+      "predicted": "Chair",
+      "count": 13
+    },
+    {
+      "yolo_label": "Tree",
+      "predicted": "Electrical Pole",
+      "count": 12
+    },
+    {
+      "yolo_label": "Manhole",
+      "predicted": "Building",
+      "count": 11
+    },
+    {
+      "yolo_label": "Car",
+      "predicted": "Pedestrian crosswalk",
+      "count": 10
+    },
+    {
+      "yolo_label": "Guard rail",
+      "predicted": "Building",
+      "count": 9
+    },
+    {
+      "yolo_label": "Bus",
+      "predicted": "Truck",
+      "count": 9
+    }
+  ],
+  "top_head_confusions": [
+    {
+      "yolo_label": "Manhole",
+      "predicted": "Pedestrian crosswalk",
+      "count": 19
+    },
+    {
+      "yolo_label": "Traffic sign",
+      "predicted": "Pedestrian crosswalk",
+      "count": 13
+    },
+    {
+      "yolo_label": "Electrical Pole",
+      "predicted": "Pedestrian crosswalk",
+      "count": 11
+    },
+    {
+      "yolo_label": "Guard rail",
+      "predicted": "Pedestrian crosswalk",
+      "count": 10
+    },
+    {
+      "yolo_label": "Car",
+      "predicted": "Pedestrian crosswalk",
+      "count": 9
+    },
+    {
+      "yolo_label": "Manhole",
+      "predicted": "Building",
+      "count": 9
+    },
+    {
+      "yolo_label": "Chair",
+      "predicted": "Pedestrian crosswalk",
+      "count": 8
+    },
+    {
+      "yolo_label": "Bus",
+      "predicted": "Building",
+      "count": 8
+    },
+    {
+      "yolo_label": "Dog",
+      "predicted": "Person",
+      "count": 8
+    },
+    {
+      "yolo_label": "Manhole",
+      "predicted": "Electrical Pole",
+      "count": 7
+    }
+  ],
+  "files": {
+    "objects": "outputs/crop_run_20260517_204504/objects.csv",
+    "summary": "outputs/crop_run_20260517_204504/summary.csv",
+    "per_degradation": "outputs/crop_run_20260517_204504/per_degradation.csv",
+    "per_class": "outputs/crop_run_20260517_204504/per_class.csv",
+    "prototype_confusion": "outputs/crop_run_20260517_204504/prototype_confusion.csv",
+    "head_confusion": "outputs/crop_run_20260517_204504/head_confusion.csv"
+  }
+}
