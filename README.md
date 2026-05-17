@@ -1,6 +1,5 @@
 ---
 title: JEPA Demo
-emoji: 🧠
 colorFrom: blue
 colorTo: green
 sdk: docker
